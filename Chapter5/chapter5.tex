@@ -1,0 +1,109 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%*********************************** Fifth Chapter *****************************
+%*******************************************************************************
+
+\chapter{Conclusion}  %Title of the First Chapter
+
+% \ifpdf
+%     \graphicspath{{Chapter1/Figs/Raster/}{Chapter1/Figs/PDF/}{Chapter1/Figs/}}
+% \else
+%     \graphicspath{{Chapter1/Figs/Vector/}{Chapter1/Figs/}}
+% \fi
+
+
+%****************all in one section*********************
+
+Noise unavoidably arises from the thermal motion of molecules and
+from the fluctuating environment where the cells reside.
+However, more and more evidence has shown that noise may play functional
+role in biology \cite{raj08,eldar10a}.
+%%
+Bacteria can utilize noise to activate a specific set of genes
+in a fraction of the population to create phenotypic 
+heterogeneity.
+%%
+In this way, bacteria may "hedge their bets" to make some individuals
+survive a sudden change in the environment or benefit the individuals
+that do not switch on stress response (thus less metabolic burden)
+if the favourable environment recovers
+(Section~\ref{sec:functional_role_noise}).
+%%
+In bacteria, the activation of a certain group of genes is typically directed
+by the expression of alternative sigma factors.
+%%
+Previous studies have shown that sigma factors may exhibit dynamical
+behaviours upon stress, e.g. stochastic pulsing ($\sigma^B$ of
+\textit{B. subtilis}) and heterogeneous start of activation
+($\sigma^V$ of \textit{B. subtilis}) \cite{locke11,schwall21a}.
+%%
+In this study, I simulated a simplified mechanistic model 
+with the Gillespie algorithm and produced
+a wide range of behaviours, e.g., stochastic pulsing, stochastic
+state-switching, stochastic anti-pulsing (i.e. inactivation pulsing),
+oscillation, etc (Section~\ref{sec:general_diff_behaviours}).
+%%
+The model features mixed positive autoregulation and negative 
+feedback loop (\cite{schwall21a} and Torkel Loman's unpublished work)
+(Section~\ref{sec:low_CN}).
+%%
+Biochemical ultrasensitivity has been shown to facilitate some
+dynamical behaviours, including oscillation and stochastic state-switching
+\cite{ferrell14c}.
+%%
+However, the role of ultrasensitivity in the alternative sigma factor 
+circuit remains unclear.
+%%
+By simulating a non-ultrasensitive circuit ($n = 1$), I observed that
+not only is oscillation lost, but also other behaviours, 
+e.g. stochastic switching and stochastic anti-pulsing, are significantly
+weakened by increased fluctuations
+(Section~\ref{sec:us_for_bs_and_oscillation}).
+%%
+Though ultrasensitivity can be important for bistability,
+many sigma factor circuits show no known source of ultrasensitivity
+from binding cooperativity.
+%%
+This suggests that there can be other sources of ultrasensitivity.
+%%
+It has also been shown that sigma factors are in competition with each
+other for the limited amount of RNAP cores 
+(Section~\ref{sec:intro_sigma_competition}).
+%%
+In light of that, I simulated a dual sigma factor model to reflect
+the competition between them (Section~\ref{sec:sigma_competition_model}).
+%%
+Based on the model, I proposed two new mechanisms for bistability to
+emerge from a non-ultrasensitivity circuit.
+%%
+First, when competition is strong, one ultrasensitive, bistable sigma factor
+circuit can force another non-ultrasensitive circuit to show
+bistability through the limitation of a shared pool of RNAP cores
+(Section~\ref{sec:forced_bistability}).
+%%
+Second, when the binding affinity between the non-ultrasensitive
+sigma factor and the RNAP core is low,
+the abundance of sigma factors is trapped in a strict-zero state.
+The circuit is then turned on by rare binding events and turned off
+by the random walk from a low copy number to zero
+(Section~\ref{sec:both_non_coop_bistability}).
+%%
+In the second scheme, I also showed that the activation variability caused by
+bistability increases as the binding affinity decreases,
+which qualitatively reflects the observations of $\sigma^V$ in 
+\textit{B. subtilis} \cite{schwall21a}.
+%%
+As the core structure used in the model is shared among various bacterial
+alternative sigma factor circuits,
+these mechanisms may represent a general strategy to generate 
+heterogeneity in a population.
+%%
+In future studies, it would be interesting to experimentally explore other
+dynamical behaviours predicted by the model.
+%%
+It would also be important to validate the proposed mechanisms of 
+non-ultrasensitive bistability by experiments.
+%%
+Finally, considering the wide range of dynamics produced from the
+rather simple sigma-anti-sigma circuit, engineering orthogonal sigma factor
+circuits may enrich the toolbox for synthetic biology.

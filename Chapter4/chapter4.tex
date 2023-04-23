@@ -1,0 +1,373 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%*********************************** Fourth Chapter *****************************
+%*******************************************************************************
+
+\chapter{Discussion}  %Title of the First Chapter
+
+% \ifpdf
+%     \graphicspath{{Chapter1/Figs/Raster/}{Chapter1/Figs/PDF/}{Chapter1/Figs/}}
+% \else
+%     \graphicspath{{Chapter1/Figs/Vector/}{Chapter1/Figs/}}
+% \fi
+
+
+%********************************** %First Section  **************************************
+\section{Considerations on the model}
+
+%% a bit context
+The change of environment can be drastic and frequent considering
+small size of bacteria,
+which often demands the use of alternative sigma factors to adapt
+to the new environment through a shift in the transcription profile.
+%%
+It is established that bacteria leverage noise to dynamically modulate
+the expression of sigma factors and, thus, create phenotypic
+heterogeneity inside the population to gain a survival advantage
+\cite{locke11,cabeen17,park18a,schwall21a}.
+%%
+Theoretical studies show that a common network motif combining 
+a positive autoregulation and a negative feedback loop with delay
+underpins these dynamics (\cite{schwall21a} and Torkel Loman's
+unpublished work).
+%%
+% mechanistic, implies bottom-up (though the parameters are
+% biochemically explicable, I'm not confidence in their accuracy)
+In this study, I used a simplified, mechanistic model of the same 
+general structure to reproduce diverse dynamical behaviours of
+the sigma factors.
+%%
+I used the discrete Gillespie algorithm to correctly predict the 
+low-molecule dynamics and properly reflect the role of noise
+in the circuit.
+%%
+I also proposed two new mechanisms to address the bistability
+suggested in non-cooperativity circuits \cite{schwall21a}
+through competition, namely
+%%
+(\textit{a}) A competing cooperative sigma factor circuit forces
+bistability via shared pool of RNAP.
+%%
+(\textit{b}) Bistability in a non-cooperative circuit
+maintained by rare sigma factor-RNAP core
+binding event due to low binding affinity.
+%%
+The theoretical work here could motivate future studies to alter the 
+sigma factor-RNAP core binding affinity (e.g. via sigma factor mutants)
+to discover potential new dynamical behaviours.
+%% 
+It may also provide new insights for synthetic biologists to engineer
+new oscillators or bistable switches by rewiring the 
+bacteria sigma factor circuits.
+%%
+Nonetheless, the model is built under considerable uncertainty of the
+actual biochemical processes and trade-off between generality
+and the amount of molecular details encoded.
+%%
+% this is a strange sentence. Behind is some degree of diffidence,
+% nevertheless, it is difficult to gather the last pieces together
+Here, I will elaborate some important decisions and assumptions
+for the model, and several future directions.
+
+\subsection{Arbitrary units of time}
+\label{sec:arbitrary_units_time}
+
+Although the model uses the absolute, discrete number of molecules
+per cell as the concentration for all chemical species
+to accurately account for stochastic fluctuations,
+the units of time are arbitrary.
+%%
+Notice that in the model (Section~\ref{sec:low_CN}),
+the maximum steady-state concentration and the molecular lifetime
+is tuned independently through $\beta$ and $\tau$.
+%%
+When the circuit is activated, the expression rate factor $v_H$ is 
+high and can approximate to 1.
+Thus, the steady-state abundance of $\sigma$ is roughly $\beta$.
+%%
+% establish that \tau is the average lifetime
+The degradation rate $1/\tau$ gives the molecule an average lifetime
+of $\tau$. To support the argument, consider the (deterministic) first-order 
+degradation reaction of molecule $x$ with degradation rate constant
+$1/\tau$:
+
+\begin{align}
+    \frac{dx}{dt} = -\frac{1}{\tau}\cdot x
+\end{align}
+
+Given the initial concentration $x_0$ at $t = 0$, the evolution of $x$
+along time is expressed as
+
+\begin{align}
+    x = x_0 \cdot e^{-t/\tau}
+\end{align}
+
+When $x_0$ is large enough, the average molecular lifetime ($\bar{t}$) can be 
+approximated by the area under the $t$-$x$ curve divided by the
+total number of molecules, $x_0$, namely
+
+\begin{align}
+    \bar{t} =& \frac{1}{x_0}\int_{t = 0}^{\infty}x_0 e^{-t/\tau}dt\\
+        =& \tau
+\end{align}
+
+Which shows that in first-order degradation kinetics, the reciprocal
+of the degradation rate is the average molecular lifetime.
+
+In the model, time is measured relative to the average lifetime of
+different molecules.
+In all simulations, the lifetime of the sigma factor is 10 time units.
+To reflect the delay from the anti-sigma factor, the lifetime of
+$A$ is set to 50, 5-times of that of the sigma factor.
+%%
+% validate k_off
+In the case of competition against the RNAP cores,
+the dissociation rate constant $k_{off}$ is reported to be 
+\SI{1e-3}{\per\second}, equivalent to the average lifetime
+of $E\sigma$ being \SI{1000}{\second} \cite{mauri14}.
+%%
+The average lifetime of sigma factors is required to normalize
+$k_{off}$ to the time units I use.
+To begin with, the half-life of the major pool of proteome in $E. coli$ 
+is reported to be around 1 hour.
+From first-order degradation kinetics, we can derive that half-life
+is $\ln 2 \cdot \tau$ (proof not shown) and thus,
+the average lifetime is around \SI{5000}{\second} \cite{maurizi92}
+%%
+However, another study reports the half-life of bacteria sigma factor
+under protease negative regulation to be 1 minute, 60-times faster than
+the average proteome \cite{el-samad05}.
+%%
+Given the scarcity of measurement, I approximately set the average lifetime
+of the holoenzyme to be the same as sigma factor (\SI{1000}{\second}).
+%%
+% finally, how to improve
+The predictability of the model can be improved by dedicated measurements
+of the half-lives of the holoenzyme and the sigma factor.
+%%
+Also, altering the relative lifetime of the anti-sigma factor compared
+to the sigma factor could reveal interesting dynamics,
+which contributes to future research directions.
+%%
+However, I argue that the accuracy of the simulation is not harmed
+by the use of arbitrary time units, since I inspected that
+the change of absolute lifetime of molecules does not change the 
+steady-state distribution of sigma factors, given a small
+time step used (data not shown).
+
+% \subsection{Steps of reaction under steady-state assumptions}
+\subsection{Derivation of model parameters}
+\label{sec:discussion_parameters}
+
+In this section, I will discuss the rationale of choosing other
+model parameters besides the aforementioned degradation/dissociation
+rates.
+%%
+% the dissociation constant is important
+The dissociation constant between RNAP cores and sigma factors,
+$K_{E\sigma}$, quantifies the binding affinity and plays an important
+role in tuning the strength of sigma factor competition and,
+thus, the existence of bistability in the system.
+%%
+The dissociation constant has the units of concentration
+\cite{alon06}.
+Since I used molecules per cell as the units for concentration
+as many literature report dissociation constants in 
+molar concentrations,
+I will first determine the conversion between the two.
+%%
+% conversion between molar and molecules
+% warning: the style of siunitx is a bit weird
+Nanomolar (\si{\nano\Molar}) is the common units for the 
+physiological concentrations of macromolecules.
+Multiplying the unit concentration (\SI{1}{\nano\Molar}) by the average cellular
+volume of bacteria (\SI{1.32}{\femto\liter}) \cite{mauri14} and the
+Avogadro constant gives approximately 0.8 (molecules/cell).
+%%
+Maeda \textit{et al.} reported that the dissociation constants
+of the alternative sigma factors in \textit{E. coli} range from
+\SI{0.3}{\nano\Molar} to \SI{4.26}{\nano\Molar}, which translates to
+0.24 to 3.41 molecules/cell \cite{maeda00}.
+%%
+However, a more recent study measures the binding affinity
+by a different method in various cellular conditions.
+The study displays that the dissociation constant
+between one of the sigma factors, RpoH (alias $\sigma^H$ or $\sigma^{32}$) 
+and RNAP cores
+may range from 18 to 100 molecules/cell across different temperatures 
+\cite{ganguly12}.
+%%
+Though both studies consistently report the binding affinity to
+the housekeeping sigma factor to be higher than any of the alternative
+ones, the absolute values can vary 10- to 100-fold, depending on
+different methods and measuring conditions.
+%%
+I chose $K_{E\sigma}$ between 10 to 100 molecules/cell for most simulations,
+in comply with the newer measurements.
+%%
+Notice that both studies measure the dissociation constants 
+\textit{in vitro}. It would be interesting to see \textit{in vivo}
+measurements, which may solve the conflicts and improve model accuracy.
+%%
+Also, since the $E$-$\sigma$ dissociation constant is shown to
+change according to ionic strength and temperature.
+Future study may explore whether the change in binding affinities
+contribute to sigma factor competition.
+
+% Finally, we talk about the amount of RNAP cores and 
+% housekeeping sigma factors
+The concentration of RNAP core enzyme in bacteria is also
+an unsettled case, with estimates ranging from
+approximately 1,500 to 13,000 copies per cell \cite{jishage95,grigorova06}.
+%%
+To ask the proportion of RNAP cores associated with
+the alternative sigma factors, which is the number used in the model
+to reflect housekeeping sigma factor competition,
+I designed an equilibrium binding model.
+%%
+The total number of RNAP enzyme cores is set to $E_t = 2,000$.
+Since the amount of housekeeping sigma factors (denoted by $\sigma^A$)
+is reported to significantly exceed at approximately 3-fold,
+I set $\sigma^A_t = 6,000$.
+Finally, I chose the number of all alternative sigma factors to be
+$\sigma^B_t = 2,000$ to reflect the observation that the alternative
+sigma factors are fewer than the housekeeping ones.
+%%
+From the above discussion of binding affinities, I set
+$K_{E\sigma^A} = 1$ and $K_{E\sigma^B} = 10$ to show the weaker 
+binding affinities of the alternative sigma factors.
+%%
+The model is given by:
+
+\begin{gather}
+    K_{E\sigma^A} = \frac{E \cdot \sigma^A}{E\sigma^A}\\
+    K_{E\sigma^B} = \frac{E \cdot \sigma^B}{E\sigma^B}\\
+    E_t = E + E\sigma^A + E\sigma^B\\
+    \sigma^A_t = \sigma^A + E\sigma^A\\
+    \sigma^B_t = \sigma^B + E\sigma^B
+\end{gather}
+
+Where $E$ represents only the free RNAP cores, while $E\sigma^A$
+are the ones bound to the housekeeping sigma factors,
+and $E_t$ is the total amount.
+The sigma factors adopt the same rules of notations.
+%%
+Solving the equations gives almost saturated RNAP core binging,
+with $E\sigma^A \approx 1,910$ and $E\sigma^B \approx 89$
+(molecules/cell).
+%%
+In the core model for the sigma factor circuit,
+I used a smaller $E = 50$ (RNAP cores available to alternative 
+sigma factors) in most settings
+to simulate a fierce competition scenario.
+%%
+Altering the amount RNAP cores available to the alternative sigma
+factors is shown to weaken the competition 
+(Section~\ref{fig:forced_bistability}).
+Future study may further quantify the effects and explore
+whether bistability can sustain with changing total number of RNAP cores.
+
+\section{Future work}
+
+By simulating a simplified two-component mathematical model
+of the alternative sigma factor circuit, I produced a range of
+behaviours, some of which have been experimentally observed.
+%%
+From this model, I examined the scenario where two alternative sigma
+factor circuits compete for the limited amount of RNAP cores.
+From there I discovered two new bistable patterns of 
+the sigma factor circuit.
+%%
+First, when the binding between sigma factors and RNAP cores
+is strong, and if a ultrasensitive circuit exists in the cell,
+another non-ultrasensitive circuit can be induced to be bistable.
+The bistability could be transferred through the shared, limited
+pool of RNAP cores.
+%%
+Second, when the binding affinity is weak (and if the amount of 
+RNAP cores are limited due other sigma factors, especially
+the housekeeping one), the event of holoenzyme formation may be
+rare. Then, the system would be turned on by the rare binding event
+and be turned off due to random walk to zero from a relative small number
+of holoenzymes.
+
+Considering that the research is theoretical, it would
+be strengthened by evidence from experiments.
+Furthermore, several experimental observations may provide the
+model with new insights and in turn refine the theory.
+%%
+To begin with, there are still a few interesting directions that
+one may explore under the current modelling framework.
+%%
+First, since the Gillespie algorithm generates correct low-copy number dynamics, 
+it would be interesting to ask what is the effect of absolute 
+number of molecules in the system to different dynamical behaviours.
+%%
+Experiments have shown that when noise is reduced due to an
+increase in the absolute number of molecules, some dynamical 
+behaviours, e.g., stochastic switching and stochastic pulsing,
+can be weakened \cite{suel06, locke11}.
+%%
+It would be important to validate and quantify this effect in theory.
+%%
+Second, I observed that, similar to the effects of ultrasensitivity,
+tuning the molecular lifetime of the anti-sigma factor to be
+less than that of the sigma factor eliminates some behaviours,
+including oscillation (data not shown).
+%%
+Intuitively, since the lifetime of anti-sigma factors determines the
+time delay of the negative feedback in the model and the lifetime
+of sigma factors determine the speed of positive autoregulation,
+establishing the oscillation may require a relative slower
+negative feedback.
+%%
+It will be interesting to confirm this from simulation or theory.
+
+Several experiments may strengthen the foundation of the model,
+including measuring the average lifetime of different sigma factors
+(considering both protein degradation and dilution effects)
+and the dissociation rate of the holoenzyme.
+%%
+A more important aspect is to measure the sigma factor-RNAP core
+binding affinity (in the form of dissociation constant 
+$K_{E\sigma}$) \textit{in vivo},
+since this binding affinity has major implications to sigma factor
+behaviours under competition.
+%%
+Moreover, there is still huge uncertainty in its measurement,
+which is complicated by the dependence of $K_{E\sigma}$ on
+different cellular conditions (Section~\ref{sec:discussion_parameters})
+\cite{ganguly12}.
+%%
+Future research may pivot on whether stress influences the binding
+affinity and, thus, alters sigma factor dynamics.
+%%
+The behaviour mapping in Figure~\ref{fig:different_behaviours}
+predicts several dynamical behaviours of sigma factors that have
+not yet been experimentally observed,
+e.g. oscillation, stochastic anti-pulsing, etc.
+%%
+It would be possible to observe these behaviours using single-cell
+techniques, by either constructing sigma factor or anti-sigma factor
+mutants, or simply by tuning the strength of stress.
+%%
+The model also suggests that the strength of competition can modify
+the bistable dynamics of non-ultrasensitive sigma factors.
+%%
+Relevant experiments can not only serve as a confirmation of the proposed
+molecular mechanisms, but also help to discover new ways to tune
+the phenotypic variability of a bacterial population.
+%%
+For example, the strategy which \textit{B. subtilis} tunes the variability
+of $\sigma^V$ by the strength of stress is qualitatively reproduced by my model
+\cite{schwall21a}.
+%%
+Finally, the range of dynamical behaviours shown in sigma factors may 
+contribute to the synthetic biology toolbox.
+%%
+Orthogonal sigma factor circuits from other species
+can be leveraged as a frequency-tunable stochastic pulsing generator
+or as a source of heterogeneity in a population.
+
+% \subsection{Heterogeneous activation time of sigV}
+% \subsection{Transient single pulsing of sigB}

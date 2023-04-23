@@ -1,0 +1,43 @@
+digraph {
+    graph[splines = false, nodesep = 0.8];
+
+    node[shape = "box", style = ""]
+        n_fp; flow_1; flow_2; flow_3; 
+        n_small; fourier;
+    node[shape = "box", style = rounded]
+        start;
+        oscillation; ir_oscillation;
+        stoch_pulsing; no_expression;
+        stoch_anti_pulsing; het_activation;
+        stoch_switching; homo_activation;
+
+    n_fp[label = "Number of stable\nfixed points"];
+    flow_1[label = <I<sub>forward</sub> &gt; ϵ <br/>or I<sub>reverse</sub> &gt; ϵ>];
+    flow_2[label = <I<sub>forward</sub> &gt; ϵ <br/>and I<sub>reverse</sub> &gt; ϵ>];
+    flow_3[label = <I<sub>forward</sub> &gt; ϵ <br/>and I<sub>reverse</sub> &gt; ϵ>];
+    n_small[label = <N<sub>small</sub> = 1>];
+    fourier[label = "Significant maximum\nin spectrum space"];
+    oscillation[label = "Oscillation"];
+    ir_oscillation[label = "Irregular\noscillation"];
+    stoch_pulsing[label = "Stochastic\npulsing"];
+    no_expression[label = "No expression"];
+    stoch_anti_pulsing[label = "Stochastic\nanti-pulsing"];
+    het_activation[label = "Heterogeneous\nactivation"];
+    homo_activation[label = "Homogeneous\nactivation"];
+    stoch_switching[label = "Stochastic\nswitching"];
+
+    start -> n_fp;
+    n_fp:w -> fourier:n[label = "N = 0"];
+    n_fp:s -> n_small:n[label = "N = 1"];
+    n_fp:e -> flow_3:n[label = "N = 2"];
+    fourier -> oscillation[label = "True"];
+    fourier -> ir_oscillation[label = "False"];
+    n_small:w -> flow_1[label = "True"];
+    n_small:e -> flow_2[label = <False and N<sub>large</sub> = 1>];
+    flow_1 -> stoch_pulsing[label = "True"];
+    flow_1 -> no_expression[label = "False"];
+    flow_2 -> stoch_anti_pulsing[label = "True"];
+    flow_2 -> homo_activation[label = "False"];
+    flow_3 -> stoch_switching[label = "True"];
+    flow_3 -> het_activation[label = "False"];
+}

@@ -1,0 +1,38 @@
+\thispagestyle {empty}
+\contentsline {chapter}{List of figures}{xi}{chapter*.5}%
+\contentsline {chapter}{List of tables}{xiii}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Gene expression noise}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Functional roles of noise}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Noise in B. subtilis sigB circuit}{3}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Bacterial alternative sigma factor circuit}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}The SigB circuit in \textit {B. subtilis}}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Shared core circuit structure}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Sigma factor competition}{5}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Biochemical ultrasensitivity}{6}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Methods}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}A general model for the dynamics of alternative sigma factors}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Sigma-anti-sigma binding kinetics}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Activation of the circuit}{10}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Modelling stochastic fluctuation under low copy number}{11}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Nondimensionalization of time}{12}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Simulation of the model}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}A sigma factor competition model}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Model parameters}{13}{section.2.4}%
+\contentsline {section}{\numberline {2.5}A classification algorithm for dynamical behaviours}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Reconstructing the vector field from simulation}{14}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Detection of fixed points and "flows" across the fluctuation thresholds}{15}{subsection.2.5.2}%
+\contentsline {chapter}{\numberline {3}Results}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mathematical model predicts different dynamical behaviours}{19}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ultrasensitivity is important for bistability and oscillation}{21}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Competition leads to bistability of non-cooperative sigma factor circuit}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Forced bistability in asymmetric dual-sigma factor circuits}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Non-cooperative bistability arises from low binding affinity}{29}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Discussion}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Considerations on the model}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Arbitrary units of time}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Derivation of model parameters}{33}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Future work}{35}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{37}{chapter.5}%
+\contentsline {chapter}{References}{39}{chapter*.18}%
+\contentsline {chapter}{Appendix \numberline {A}Source code}{45}{appendix.a.A}%

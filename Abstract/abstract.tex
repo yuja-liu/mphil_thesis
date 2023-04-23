@@ -1,0 +1,67 @@
+% ************************** Thesis Abstract *****************************
+% Use `abstract' as an option in the document class to print only the titlepage and the abstract.
+\begin{abstract}
+
+Bacteria can exploit gene expression noise to create 
+phenotypic heterogeneity in a population, 
+which may allow a fraction of the population to survive 
+a sudden change in environmental conditions.
+%%
+The phenotypic variations are typically caused by stochastically 
+turning on or off a specific set of genes.
+%%
+Alternative sigma factors 
+(common regulatory proteins of bacterial stress responses) 
+often drive this variability.
+%%
+Recent studies show that sigma factors may adopt dynamical behaviours, 
+including stochastic pulsing and bistability, 
+to modulate their cellular abundance.
+%%
+It has also been shown that biochemical ultrasensitivity 
+is important for several behaviours, such as bistability, 
+but its exact role in the sigma factor circuit remains unclear.
+%%
+Here I simulate a simplified mechanistic model of 
+an alternative sigma factor circuit using the Gillespie algorithm.
+%%
+The model features a mixed self-activation and 
+negative feedback loop with time delay.
+%%
+I first show that a range of dynamical behaviours is produced.
+%%
+Then I observe that without ultrasensitivity, 
+several dynamical behaviours are significantly 
+weakened or cannot be maintained.
+%%
+As many sigma factor circuits do not encode ultrasensitivity, 
+it raises the question of how stochastic switching of 
+gene expression is achieved.
+%%
+Sigma factors must bind to the RNA polymerase (RNAP) core enzymes to function, 
+and recent studies show that the competition between sigma factors 
+for the limited pool of  RNAP cores shapes sigma factor dynamics.
+%%
+In light of that, I propose two new mechanisms 
+for a non-ultrasensitive sigma factor to maintain bistability.
+%%
+First, under strong competition, 
+a bistable ultrasensitive circuit may force a non-ultrasensitive circuit 
+to adopt bistability through the limitation of shared resources.
+%%
+Second, for two non-ultrasensitive circuits with low binding affinity 
+of sigma factors to RNAP cores, the circuit is locked to 
+a zero-state and turns on by rare binding events through a self-activation.
+%%
+I show that in the latter scheme, 
+the variations in initial activation times are reduced 
+as sigma factor-core RNAP binding affinity increases, 
+which has implications for a previous model of heterogeneous activation 
+of the alternative sigma factor $\sigma^V$ in 
+\textit{Bacillus subtilis}.
+%%
+Since the core sigma factor circuit structure is conserved 
+across many bacteria, this research may shed light on 
+a general strategy for the bacteria population to create heterogeneity.
+    
+\end{abstract}

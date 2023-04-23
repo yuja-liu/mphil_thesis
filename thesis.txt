@@ -1,0 +1,382 @@
+Chapter 2
+Methods
+2.1
+
+A general model for alternative sigma factor dynamics
+
+Here I propose this general model to explain the spectrum of dynamical behaviours, e.g.
+stochastic pulsing [1, 2], transient pulsing, sustained activation [2], etc. of the bacterial
+alternative sigma factors on the species Bacillus subtilis. It also serves as the foundation
+of the time sharing regime of sigma factor pulsing [3]. The model is based on the general
+topology that is shared by multiple alternative sigma factor networks including 𝜎𝐷 , 𝜎𝑊 ,
+𝜎𝑋 , etc [4–6], namely
+
+• The sigma factor is under positive autoregulation, i.e., the sigma factor activates
+its own expression.
+• An anti-sigma factor is co-expressed with the sigma factor as its inhibitor, forming
+a negative feedback loop.
+
+I formalize a minimal but biochemically accurate model based on these network
+topologies. Without loss of generality, the following model reflects the 𝜎𝐵 regulatory
+network but is applicable to other alternative sigma factors. First, the promoter of the
+operon which contains 𝑠𝑖𝑔𝐵 gene is transcribed by the RNA polymerase (RNAP) holoenzyme comprising 𝜎𝐵 . The transcription rate relative to the maximal rate is modelled by
+Hill kinetics with hypothetical ultrasensitivity encoded in 𝑛:
+𝑣𝐻 =
+
+𝜎𝑓𝑛
+
+𝐾𝑆𝑛 + 𝜎𝑓𝑛
+
+(2.1)
+
+4
+
+Methods
+
+where 𝜎𝑓 is the abundance of unbound 𝜎𝐵 , as the anti-sigma factor RsbW (denoted
+by 𝐴) competes the binding of 𝜎𝐵 with RNAP core.
+Second, the negative regulator, RsbW, secludes 𝜎𝐵 from the RNAP core by binding to
+it and forming a complex (denoted by 𝐴 ∶ 𝜎). As the binding is on a faster time scale than
+transcription, the binding dynamics can be considered at steady-state in transcriptional
+regulation. The binding dynamics is governed by
+
+𝐾𝐷 =
+
+𝐴𝑓 ⋅ 𝜎𝑓
+
+𝐴∶𝜎
+𝜎 = 𝜎𝑓 + 𝐴 ∶ 𝜎
+
+(2.2)
+(2.3)
+
+where 𝜎 is the total abundance of 𝜎𝐵 and 𝐴𝑓 is the amount of unbound RsbW. Together, Eq. 2.2 and Eq. 2.3 bridges the abundance of the free 𝜎𝐵 and the total 𝜎𝐵 as
+𝜎𝑓 =
+
+𝐾𝐷
+𝜎
+𝐾𝐷 + 𝐴𝑓
+
+(2.4)
+
+i.e. the binding is subject to Michaelis-Menten kinetics, which, in the general model
+described here, is considered as non-cooperative. Finally, under the assumption that
+the anti-sigma factor is in excess to the sigma factor so that 𝐴 ≈ 𝐴𝑓 , Eq. 2.1 can be rewritten as
+
+2.1.1
+
+𝑣𝐻 =
+
+(𝜎/𝐾𝑆 )𝑛
+(𝜎/𝐾𝑆 )𝑛 + (𝐴/𝐾𝐷 + 1)𝑛
+
+(2.5)
+
+Cooperative binding between sigma factors and anti-sigma factors
+
+Given Eq. 2.5 where ultrasensitivity is derived from the cooperativity of transcription
+initiation, there are other steps in the core sigma factor network that can potentially
+contribute to 𝑛, e.g., for 𝜎𝐵 network, RsbW dimerizes to bind 𝜎𝐵 , which is captured by
+as 𝜎𝑓 = 𝐾𝐷2 /(𝐾𝐷2 +𝐴𝑓2 )⋅𝜎. Generalization leads to an alternative form of Eq. 2.5 where the
+cooperative binding between sigma factors and anti-sigma factors solely accounts for
+the ultrasensitivity.
+
+2.1 A general model for alternative sigma factor dynamics
+
+2.1.2
+
+𝑣𝐻 =
+
+5
+
+𝜎/𝐾𝑆
+𝜎/𝐾𝑆 + (𝐴/𝐾𝐷 )𝑛 + 1
+
+(2.6)
+
+Activation of the alternative sigma factor network
+
+For the 𝜎𝐵 regulatory network, upon exposure to the stressor, a phosphatase, either RsbQP or RsbTU, depending on being whether environmental stress energy stress, is released, which in turn dephosphorylate the anti-anti-sigma factor RsbV to its activated
+form (which the activated from is denoted by 𝑉). RsbV competes the binding of RsbW
+with 𝜎𝐵 , which releases 𝜎𝐵 and, thus, triggers the stress response.
+Similar to Eq. 2.4, at steady-state, the abundance of RsbW free to RsbV binding is
+captured by Michaelis-Menten kinetics
+
+𝐴𝑓 =
+
+𝐾𝐴
+𝐴
+𝐾𝐴 + 𝑉
+
+(2.7)
+
+Notice that in Eq. 2.5, 𝐴 is essentially the unbound anti-sigma factor, considering
+the effect of 𝑉, I have
+𝑣𝐻 =
+
+(𝜎/𝐾𝑆 )𝑛
+
+𝐴
+(𝜎/𝐾𝑆 )𝑛 + ( (1+𝑉 /𝐾
+
+𝐴 )𝐾𝐷
+
++ 1)
+
+𝑛
+
+(2.8)
+
+Here, I define the apparent 𝐾𝐷 as 𝐾𝐷′ = (1 + 𝑉 /𝐾𝐴 ) ⋅ 𝐾𝐷 , which then keeps the mathematical form of Eq. 2.5 unchanged. Thus, upon stress, the step-increase in the abundance of dephosphorylated RsbV is modelled by a step-increase of the apparent 𝐾𝐷 . For
+the general model, the step-increase of 𝐾𝐷 reflects the activation of an alternative sigma
+factor network.
+
+2.1.3
+
+Modelling the stochastic fluctuation under low copy number
+
+The alternative σ factors typically exist in low copy number and, thus, their abundance
+is subject to stochastic fluctuation. In E. coli, while there can be thousands of housekeeping 𝜎70 factor per cell, the number of alternative 𝜎𝐸 factor is only about 160 even
+under stress [7]. As the noise can be crucial to the pulsing dynamics [3], I model the system with the exact molecular number of the alternative σ factor (𝜎) and the anti-sigma
+
+6
+
+Methods
+
+factor (𝐴) as the state variables, and the random walk among the states with the jump
+event:
+
+𝜎
+
+𝛽
+𝜏𝑆 (𝑣0 +𝑣𝐻 )
+
+𝜎
+
+𝐴
+
+𝐴
+
+−−−−−−−−−−−−→
+1
+𝜏𝑆 𝜎
+
+−−−−−−−→
+𝛽
+𝜏 𝐴 𝑣𝐻
+
+−−−−−−−−→
+1
+𝜏𝐴 𝐴
+
+−−−−−−−→
+
+𝜎+1
+
+(2.9)
+
+𝜎−1
+
+(2.10)
+
+𝐴−1
+
+(2.12)
+
+𝐴+1
+
+(2.11)
+
+where the relative transcription rate, 𝑣𝐻 is given by Eq. 2.5. The transcription rate is
+generalized which also accounts for translation. 𝑣0 is the basal transcription activity and
+𝛽 is the maximal transcription rate, which determines the steady-state abundance. If
+steady-state is reached, the average abundance of both species equals to 𝛽𝑣𝐻 (ignoring
+basal transcription), i.e. ⟨𝜎⟩ = ⟨𝐴⟩. 𝜎 and 𝐴 share the same primary transcription rate
+since they are co-expressed in the same operon.
+The parameters used in the general model or the derivation of which are listed in
+Table 2.1.
+Parameter
+𝐾𝑆
+𝐾𝐷
+𝐾𝐴
+𝜏𝑆
+𝜏𝐴
+𝛽
+𝑣0
+
+2.2
+
+Description
+Dissociation coefficient between the sigma factor- RNAP core
+complex and the promoter
+Dissociation coefficient between the sigma factor and the antisigma factor
+Dissociation coefficient between the anti-sigma factor and the
+anti-anti-sigma factor
+Molecular lifetime of the sigma factor
+Molecular lifetime of the anti-sigma factor
+Maximal transcription rate of the sigma factor-activated operon
+Basal transcription rate of the sigma factor-activated operon
+Table 2.1 Parameter list of the general model
+
+Simulation of the model
+
+The model is simulated by the Gillespie algorithm, i.e. the Stochastic Simulation Algorithm[8], which generates statistically accurate trajectories of the jump processes de-
+
+2.3 An automatic classifier for different dynamical behaviours
+
+7
+
+scribed in Section 2.1.3 as a Markov process. The algorithm I used is provided by the
+Catalyst.jl[9] package of the Julia language[10].
+
+2.3
+
+An automatic classifier for different dynamical behaviours
+
+The classification algorithm described here takes the discrete-valued trajectories of a
+two-species reaction system as the input and classify the system as one of the dynamical regimes. First, the algorithm recreates the phase-plane paths and the vector field
+of time-derivatives from the trajectories. The intensity (𝐼) of phase-plane path of each
+lattice point on the phase plane is calculated as the total number of times that the path
+passes the point. The time-derivative at the point (𝜎𝑘 , 𝐴𝑘 ) is approximated by
+1
+𝜎(𝑡𝑘 + Δ𝑡) − 𝜎(𝑡𝑘 − Δ𝑡)
+∑
+𝐼 (𝜎𝑘 , 𝐴𝑘 ) 𝑡𝑘
+2Δ𝑡
+1
+𝐴(𝑡𝑘 + Δ𝑡) − 𝐴(𝑡𝑘 − Δ𝑡)
+𝐴̇ =
+∑
+𝐼 (𝜎𝑘 , 𝐴𝑘 ) 𝑡𝑘
+2Δ𝑡
+
+𝜎̇ =
+
+(2.13)
+(2.14)
+
+where 𝑡𝑘 are the time points after exposure to stress which satisfies 𝜎(𝑡𝑘 ) = 𝜎𝑘 and𝐴(𝑡𝑘 ) =
+𝐴𝑘 . Second, the algorithm identifies the stable fixed points of the system, if existing, by
+finding the lattice point which is both a minimum of the magnitude of the derivative
+vector and a maximum of the path intensity. To exclude false positives due to the trivial local extrema caused by stochastic fluctuation, the vector field is smoothed and the
+magnitude of the derivative vector and the path intensity at the point are tested against
+certain thresholds.
+Finally, Figure 2.1 shows the flowchart to decide the classification, where 𝑁𝑠𝑚𝑎𝑙𝑙 is
+the number of stable fixed points where the abundance of both species are greater than
+the threshold 𝑇𝑓𝑙𝑢𝑐 , and similarly, 𝑁𝑙𝑎𝑟𝑔𝑒 is the number of stable fixed points which the
+abundance of both species are less than 𝑇𝑓𝑙𝑢𝑐 . 𝐼𝑓𝑜𝑟𝑤𝑎𝑟𝑑 , or the forward flow, is defined
+as the sum of intensity on the vertical segment from (𝑇𝑓𝑙𝑢𝑐 , 0) to (𝑇𝑓𝑙𝑢𝑐 , 𝑇𝑓𝑙𝑢𝑐 ). Similarly,
+the reverse flow 𝐼𝑟𝑒𝑣𝑒𝑟𝑠𝑒 is the sum of intensity on the horizontal segment from (0, 𝑇𝑓𝑙𝑢𝑐 )
+to (𝑇𝑓𝑙𝑢𝑐 , 𝑇𝑓𝑙𝑢𝑐 ).
+
+8
+
+2.3.1
+
+Methods
+
+Determine the threshold from the level of stochastic fluctuation
+
+2.4
+
+The time sharing model for sigma factor pulsing
+
+Oscillation
+
+True
+
+Stochastic
+pulsing
+
+Iforward > ϵ
+or I reverse > ϵ
+
+Irregular
+oscillation
+
+No expression
+
+False
+
+True
+
+True
+
+N=1
+Nsmall = 1
+
+False
+
+Significant maximum
+in spectrum space
+
+N=0
+
+Stochastic
+anti-pulsing
+
+True
+
+Homogeneous
+activation
+
+Heterogeneous
+activation
+
+False
+
+Iforward > ϵ
+and Ireverse > ϵ
+
+N=2
+
+False
+
+False and Nlarge = 1
+Iforward > ϵ
+and Ireverse > ϵ
+
+Number of stable
+fixed points
+
+start
+
+True
+Stochastic
+switching
+
+2.4 The time sharing model for sigma factor pulsing
+9
+
+Fig. 2.1 Flowchart for the classification algorithm
+
+References
+[1] James C. W. Locke, Jonathan W. Young, Michelle Fontes, María Jesús Hernández
+Jiménez, and Michael B. Elowitz. Stochastic Pulse Regulation in Bacterial Stress
+Response. Science, 334(6054):366–369, October 2011.
+[2] Matthew T. Cabeen, Jonathan R. Russell, Johan Paulsson, and Richard Losick.
+Use of a microfluidic platform to uncover basic features of energy and environmental stress responses in individual cells of Bacillus subtilis. PLOS Genetics,
+13(7):e1006901, July 2017.
+[3] Jin Park, Marta Dies, Yihan Lin, Sahand Hormoz, Stephanie E. Smith-Unna,
+Sofia Quinodoz, María Jesús Hernández-Jiménez, Jordi Garcia-Ojalvo, James C. W.
+Locke, and Michael B. Elowitz. Molecular Time Sharing through Dynamic Pulsing
+in Single Cells. Cell Systems, 6(2):216–229.e15, February 2018.
+[4] W. G. Haldenwang. The sigma factors of Bacillus subtilis. Microbiological Reviews,
+59(1):1–30, March 1995.
+[5] Xuejun Huang, Kurt L. Fredrick, and John D. Helmann. Promoter Recognition by
+Bacillus subtilis 𝜍W: Autoregulation and Partial Overlap with the 𝜍X Regulon. Journal of Bacteriology, 180(15):3765–3770, August 1998.
+
+[6] Yi-Huang Hsueh, Loralyn M. Cozy, Lok-To Sham, Rebecca A. Calvo, Alina D. Gutu,
+Malcolm E. Winkler, and Daniel B. Kearns. DegU-phosphate activates expression of the anti-sigma factor FlgM in Bacillus subtilis. Molecular microbiology,
+81(4):1092–1108, August 2011.
+[7] Bruno Collinet, Harumi Yuzawa, Thomas Chen, Christian Herrera, and Dominique
+Missiakas. RseB Binding to the Periplasmic Domain of RseA Modulates the
+RseA:𝜍E Interaction in the Cytoplasm and the Availability of 𝜍E⋅RNA Polymerase*.
+Journal of Biological Chemistry, 275(43):33898–33904, October 2000.
+[8] Daniel T. Gillespie. Exact stochastic simulation of coupled chemical reactions. The
+Journal of Physical Chemistry, 81(25):2340–2361, December 1977.
+[9] SciML/Catalyst.jl. SciML Open Source Scientific Machine Learning, July 2021.
+[10] Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral B Shah. Julia: A fresh
+approach to numerical computing. SIAM Review, 59(1):65–98, 2017.
+
+

@@ -1,0 +1,354 @@
+\begin{thebibliography}{10}
+
+\bibitem{elowitz02a}
+Michael~B. Elowitz, Arnold~J. Levine, Eric~D. Siggia, and Peter~S. Swain.
+\newblock Stochastic {{Gene Expression}} in a {{Single Cell}}.
+\newblock {\em Science}, 297(5584):1183--1186, August 2002.
+
+\bibitem{cai06a}
+Long Cai, Nir Friedman, and X.~Sunney Xie.
+\newblock Stochastic protein expression in individual cells at the single
+  molecule level.
+\newblock {\em Nature}, 440(7082):358--362, March 2006.
+
+\bibitem{yu06a}
+Ji~Yu, Jie Xiao, Xiaojia Ren, Kaiqin Lao, and X.~Sunney Xie.
+\newblock Probing {{Gene Expression}} in {{Live Cells}}, {{One Protein
+  Molecule}} at a {{Time}}.
+\newblock {\em Science}, 311(5767):1600--1603, March 2006.
+
+\bibitem{becskei00}
+A.~Becskei and L.~Serrano.
+\newblock Engineering stability in gene networks by autoregulation.
+\newblock {\em Nature}, 405(6786):590--593, June 2000.
+
+\bibitem{alon06}
+Uri Alon.
+\newblock {\em An {{Introduction}} to {{Systems Biology}}: {{Design
+  Principles}} of {{Biological Circuits}}}.
+\newblock {CRC Press}, July 2006.
+
+\bibitem{yan19}
+Jiawei Yan, Andreas Hilfinger, Glenn Vinnicombe, and Johan Paulsson.
+\newblock Kinetic {{Uncertainty Relations}} for the {{Control}} of {{Stochastic
+  Reaction Networks}}.
+\newblock {\em Physical Review Letters}, 123(10):108101, September 2019.
+
+\bibitem{raj08}
+Arjun Raj and Alexander {van Oudenaarden}.
+\newblock Nature, nurture, or chance: Stochastic gene expression and its
+  consequences.
+\newblock {\em Cell}, 135(2):216--226, October 2008.
+
+\bibitem{eldar10a}
+Avigdor Eldar and Michael~B. Elowitz.
+\newblock Functional roles for noise in genetic circuits.
+\newblock {\em Nature}, 467(7312):167--173, September 2010.
+
+\bibitem{dietrich07}
+Jens-Erik Dietrich and Takashi Hiiragi.
+\newblock Stochastic patterning in the mouse pre-implantation embryo.
+\newblock {\em Development (Cambridge, England)}, 134(23):4219--4231, December
+  2007.
+
+\bibitem{schweder99}
+T.~Schweder, Angela Kolyschkow, Uwe V{\"o}lker, and Michael Hecker.
+\newblock Analysis of the expression and function of the
+  {{$\sigma$B-dependent}} general stress regulon of {{Bacillus}} subtilis
+  during slow growth.
+\newblock {\em Archives of Microbiology}, 171(6):439--443, May 1999.
+
+\bibitem{acar08}
+Murat Acar, Jerome~T. Mettetal, and Alexander {van Oudenaarden}.
+\newblock Stochastic switching as a survival strategy in fluctuating
+  environments.
+\newblock {\em Nature Genetics}, 40(4):471--475, April 2008.
+
+\bibitem{kussell05}
+Edo Kussell and Stanislas Leibler.
+\newblock Phenotypic {{Diversity}}, {{Population Growth}}, and {{Information}}
+  in {{Fluctuating Environments}}.
+\newblock {\em Science}, 309(5743):2075--2078, September 2005.
+
+\bibitem{suel06}
+G{\"u}rol~M. S{\"u}el, Jordi {Garcia-Ojalvo}, Louisa~M. Liberman, and
+  Michael~B. Elowitz.
+\newblock An excitable gene regulatory circuit induces transient cellular
+  differentiation.
+\newblock {\em Nature}, 440(7083):545--550, March 2006.
+
+\bibitem{maamar05}
+H{\'e}dia Maamar and David Dubnau.
+\newblock Bistability in the {{Bacillus}} subtilis {{K-state}} (competence)
+  system requires a positive feedback loop.
+\newblock {\em Molecular microbiology},
+  56(3):10.1111/j.1365--2958.2005.04592.x, May 2005.
+
+\bibitem{locke11}
+James C.~W. Locke, Jonathan~W. Young, Michelle Fontes, Mar{\'i}a
+  Jes{\'u}s~Hern{\'a}ndez Jim{\'e}nez, and Michael~B. Elowitz.
+\newblock Stochastic {{Pulse Regulation}} in {{Bacterial Stress Response}}.
+\newblock {\em Science}, 334(6054):366--369, October 2011.
+
+\bibitem{cabeen17}
+Matthew~T. Cabeen, Jonathan~R. Russell, Johan Paulsson, and Richard Losick.
+\newblock Use of a microfluidic platform to uncover basic features of energy
+  and environmental stress responses in individual cells of {{Bacillus}}
+  subtilis.
+\newblock {\em PLOS Genetics}, 13(7):e1006901, July 2017.
+
+\bibitem{park18a}
+Jin Park, Marta Dies, Yihan Lin, Sahand Hormoz, Stephanie~E. {Smith-Unna},
+  Sofia Quinodoz, Mar{\'i}a~Jes{\'u}s {Hern{\'a}ndez-Jim{\'e}nez}, Jordi
+  {Garcia-Ojalvo}, James C.~W. Locke, and Michael~B. Elowitz.
+\newblock Molecular {{Time Sharing}} through {{Dynamic Pulsing}} in {{Single
+  Cells}}.
+\newblock {\em Cell Systems}, 6(2):216--229.e15, February 2018.
+
+\bibitem{osterberg11}
+Sofia {\"O}sterberg, Teresa del {Peso-Santos}, and Victoria Shingler.
+\newblock Regulation of {{Alternative Sigma Factor Use}}.
+\newblock {\em Annual Review of Microbiology}, 65(1):37--55, October 2011.
+
+\bibitem{hecker07}
+Michael Hecker, Jan {Pan{\'e}-Farr{\'e}}, and V{\"o}lker Uwe.
+\newblock {{SigB-Dependent General Stress Response}} in {{Bacillus}} subtilis
+  and {{Related Gram-Positive Bacteria}}.
+\newblock {\em Annual Review of Microbiology}, 61(1):215--236, October 2007.
+
+\bibitem{voelker95}
+U~Voelker, A~Voelker, B~Maul, M~Hecker, A~Dufour, and W~G Haldenwang.
+\newblock Separate mechanisms activate sigma {{B}} of {{Bacillus}} subtilis in
+  response to environmental and metabolic stresses.
+\newblock {\em Journal of Bacteriology}, 177(13):3771--3780, July 1995.
+
+\bibitem{gaidenko06}
+Tatiana~A. Gaidenko, Tae-Jong Kim, Andrea~L. Weigel, Margaret~S. Brody, and
+  Chester~W. Price.
+\newblock The {{Blue-Light Receptor YtvA Acts}} in the {{Environmental Stress
+  Signaling Pathway}} of {{Bacillus}} subtilis.
+\newblock {\em Journal of Bacteriology}, 188(17):6387--6395, September 2006.
+
+\bibitem{brigulla03}
+Matthias Brigulla, Tamara Hoffmann, Andrea Krisp, Andrea V{\"o}lker, Erhard
+  Bremer, and Uwe V{\"o}lker.
+\newblock Chill induction of the {{SigB-dependent}} general stress response in
+  {{Bacillus}} subtilis and its contribution to low-temperature adaptation.
+\newblock {\em Journal of Bacteriology}, 185(15):4305--4314, August 2003.
+
+\bibitem{alper96}
+S.~Alper, A.~Dufour, D.~A. Garsin, L.~Duncan, and R.~Losick.
+\newblock Role of adenosine nucleotides in the regulation of a stress-response
+  transcription factor in {{Bacillus}} subtilis.
+\newblock {\em Journal of Molecular Biology}, 260(2):165--177, July 1996.
+
+\bibitem{kalman90}
+S~Kalman, M~L Duncan, S~M Thomas, and C~W Price.
+\newblock Similar organization of the {{sigB}} and {{spoIIA}} operons encoding
+  alternate sigma factors of {{Bacillus}} subtilis {{RNA}} polymerase.
+\newblock {\em Journal of Bacteriology}, 172(10):5575--5585, October 1990.
+
+\bibitem{dufour94}
+A.~Dufour and W.~G. Haldenwang.
+\newblock Interactions between a {{Bacillus}} subtilis anti-sigma factor
+  ({{RsbW}}) and its antagonist ({{RsbV}}).
+\newblock {\em Journal of Bacteriology}, 176(7):1813--1820, April 1994.
+
+\bibitem{martinez-lumbreras18}
+Santiago {Mart{\'i}nez-Lumbreras}, Caterina Alfano, Nicola~J. Evans,
+  Katherine~M. Collins, Kelly~A. Flanagan, R.~Andrew Atkinson, Ewelina~M.
+  Krysztofinska, Anupama Vydyanath, Jacquelin Jackter, Sarah {Fixon-Owoo},
+  Amy~H. Camp, and Rivka~L. Isaacson.
+\newblock Structural and {{Functional Insights}} into {{Bacillus}} subtilis
+  {{Sigma Factor Inhibitor}}, {{CsfB}}.
+\newblock {\em Structure}, 26(4):640--648.e5, April 2018.
+
+\bibitem{haldenwang95}
+W.~G. Haldenwang.
+\newblock The sigma factors of {{Bacillus}} subtilis.
+\newblock {\em Microbiological Reviews}, 59(1):1--30, March 1995.
+
+\bibitem{trevino-quintanilla13}
+Luis~Gerardo {Trevi{\~n}o-Quintanilla}, Julio~Augusto {Freyre-Gonz{\'a}lez},
+  and Irma {Mart{\'i}nez-Flores}.
+\newblock Anti-{{Sigma Factors}} in {{E}}. coli: {{Common Regulatory Mechanisms
+  Controlling Sigma Factors Availability}}.
+\newblock {\em Current Genomics}, 14(6):378--387, September 2013.
+
+\bibitem{hicks96}
+Karen~A. Hicks and Alan~D. Grossman.
+\newblock Altering the level and regulation of the major sigma subunit of
+  {{RNA}} polymerase affects gene expression and development in {{Bacillus}}
+  subtilis.
+\newblock {\em Molecular Microbiology}, 20(1):201--212, 1996.
+
+\bibitem{zhou92a}
+Y~N Zhou, W~A Walter, and C~A Gross.
+\newblock A mutant sigma 32 with a small deletion in conserved region 3 of
+  sigma has reduced affinity for core {{RNA}} polymerase.
+\newblock {\em Journal of Bacteriology}, 174(15):5005--5012, August 1992.
+
+\bibitem{maeda00}
+Hiroto Maeda, Nobuyuki Fujita, and Akira Ishihama.
+\newblock Competition among seven {{Escherichia}} coli {$\sigma$} subunits:
+  Relative binding affinities to the core {{RNA}} polymerase.
+\newblock {\em Nucleic Acids Research}, 28(18):3497--3503, September 2000.
+
+\bibitem{ganguly12}
+Abantika Ganguly and Dipankar Chatterji.
+\newblock A {{Comparative Kinetic}} and {{Thermodynamic Perspective}} of the
+  {$\sigma$}-{{Competition Model}} in {{Escherichia}} coli.
+\newblock {\em Biophysical Journal}, 103(6):1325--1333, September 2012.
+
+\bibitem{jishage95}
+M.~Jishage and A.~Ishihama.
+\newblock Regulation of {{RNA}} polymerase sigma subunit synthesis in
+  {{Escherichia}} coli: Intracellular levels of sigma 70 and sigma 38.
+\newblock {\em Journal of Bacteriology}, 177(23):6832--6835, December 1995.
+
+\bibitem{ferrell14a}
+James~E. Ferrell and Sang~Hoon Ha.
+\newblock Ultrasensitivity {{Part I}}: {{Michaelian}} responses and zero-order
+  ultrasensitivity.
+\newblock {\em Trends in biochemical sciences}, 39(10):496--503, October 2014.
+
+\bibitem{hill13}
+Archibald~Vivian Hill.
+\newblock The {{Combinations}} of {{Haemoglobin}} with {{Oxygen}} and with
+  {{Carbon Monoxide}}. {{I}}.
+\newblock {\em Biochemical Journal}, 7(5):471--480, October 1913.
+
+\bibitem{michaelis13}
+Leonor Michaelis and Maud~Leonora Menten.
+\newblock Die {{Kinetik}} der {{Invertinwirkung}}.
+\newblock {\em Biochem. Z.}, 49:333--369, 1913.
+
+\bibitem{john12}
+Kuriyan John, Konforti Boyana, and Wemmer David.
+\newblock {\em The {{Molecules}} of {{Life}}: {{First Edition}}}.
+\newblock {W.W. Norton \& Company}, July 2012.
+
+\bibitem{ferrell14b}
+James~E. Ferrell and Sang~Hoon Ha.
+\newblock Ultrasensitivity {{Part II}}: {{Multisite}} phosphorylation,
+  stoichiometric inhibitors, and positive feedback.
+\newblock {\em Trends in biochemical sciences}, 39(11):556--569, November 2014.
+
+\bibitem{ferrell14c}
+Ferrell~JE Jr and Ha~Sh.
+\newblock Ultrasensitivity part {{III}}: Cascades, bistable switches, and
+  oscillators.
+\newblock {\em Trends in Biochemical Sciences}, 39(12):612--618, November 2014.
+
+\bibitem{gardner00c}
+Timothy~S. Gardner, Charles~R. Cantor, and James~J. Collins.
+\newblock Construction of a genetic toggle switch in {{Escherichia}} coli.
+\newblock {\em Nature}, 403(6767):339--342, January 2000.
+
+\bibitem{schwall21a}
+Christian~P. Schwall, Torkel~E. Loman, Bruno M.~C. Martins, Sandra Cortijo,
+  Casandra Villava, Vassili Kusmartsev, Toby Livesey, Teresa Saez, and James
+  C.~W. Locke.
+\newblock Tunable phenotypic variability through an autoregulatory alternative
+  sigma factor circuit.
+\newblock {\em Molecular Systems Biology}, 17(7):e9832, July 2021.
+
+\bibitem{narula16}
+Jatin Narula, Abhinav Tiwari, and Oleg~A. Igoshin.
+\newblock Role of {{Autoregulation}} and {{Relative Synthesis}} of {{Operon
+  Partners}} in {{Alternative Sigma Factor Networks}}.
+\newblock {\em PLOS Computational Biology}, 12(12):e1005267, December 2016.
+
+\bibitem{huang98}
+Xuejun Huang, Kurt~L. Fredrick, and John~D. Helmann.
+\newblock Promoter {{Recognition}} by {{Bacillus}} subtilis {{$\varsigma$W}}:
+  {{Autoregulation}} and {{Partial Overlap}} with the {{$\varsigma$X Regulon}}.
+\newblock {\em Journal of Bacteriology}, 180(15):3765--3770, August 1998.
+
+\bibitem{hsueh11}
+Yi-Huang Hsueh, Loralyn~M. Cozy, Lok-To Sham, Rebecca~A. Calvo, Alina~D. Gutu,
+  Malcolm~E. Winkler, and Daniel~B. Kearns.
+\newblock {{DegU-phosphate}} activates expression of the anti-sigma factor
+  {{FlgM}} in {{Bacillus}} subtilis.
+\newblock {\em Molecular microbiology}, 81(4):1092--1108, August 2011.
+
+\bibitem{collinet00}
+Bruno Collinet, Harumi Yuzawa, Thomas Chen, Christian Herrera, and Dominique
+  Missiakas.
+\newblock {{RseB Binding}} to the {{Periplasmic Domain}} of {{RseA Modulates}}
+  the {{RseA}}:{{$\varsigma$E Interaction}} in the {{Cytoplasm}} and the
+  {{Availability}} of {{$\varsigma$E}}{$\cdot$}{{RNA Polymerase}}*.
+\newblock {\em Journal of Biological Chemistry}, 275(43):33898--33904, October
+  2000.
+
+\bibitem{gillespie77}
+Daniel~T. Gillespie.
+\newblock Exact stochastic simulation of coupled chemical reactions.
+\newblock {\em The Journal of Physical Chemistry}, 81(25):2340--2361, December
+  1977.
+
+\bibitem{catalystjl}
+{{SciML}}/{{Catalyst}}.jl.
+\newblock SciML Open Source Scientific Machine Learning, July 2021.
+
+\bibitem{rackauckas17}
+Christopher Rackauckas and Qing Nie.
+\newblock {{DifferentialEquations}}.jl \textendash{} {{A Performant}} and
+  {{Feature-Rich Ecosystem}} for {{Solving Differential Equations}} in
+  {{Julia}}.
+\newblock {\em Journal of Open Research Software}, 5(1):15, May 2017.
+
+\bibitem{Julia-2017}
+Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral~B Shah.
+\newblock Julia: {{A}} fresh approach to numerical computing.
+\newblock {\em SIAM Review}, 59(1):65--98, 2017.
+
+\bibitem{mauri14}
+Marco Mauri and Stefan Klumpp.
+\newblock A {{Model}} for {{Sigma Factor Competition}} in {{Bacterial Cells}}.
+\newblock {\em PLOS Computational Biology}, 10(10):e1003845, October 2014.
+
+\bibitem{hesse22}
+Janina Hesse, Jan-Hendrik Schleimer, Nikolaus Maier, Dietmar Schmitz, and
+  Susanne Schreiber.
+\newblock Temperature elevations can induce switches to homoclinic action
+  potentials that alter neural encoding and synchronization.
+\newblock {\em Nature Communications}, 13(1):3934, July 2022.
+
+\bibitem{paulsson05a}
+Johan Paulsson.
+\newblock Models of stochastic gene expression.
+\newblock {\em Physics of Life Reviews}, 2(2):157--175, June 2005.
+
+\bibitem{chabot07}
+Jeffrey~R. Chabot, Juan~M. Pedraza, Prashant Luitel, and Alexander {van
+  Oudenaarden}.
+\newblock Stochastic gene expression out-of-steady-state in the cyanobacterial
+  circadian clock.
+\newblock {\em Nature}, 450(7173):1249--1252, December 2007.
+
+\bibitem{gillespie00}
+Daniel~T. Gillespie.
+\newblock The chemical {{Langevin}} equation.
+\newblock {\em The Journal of Chemical Physics}, 113(1):297--306, July 2000.
+
+\bibitem{maurizi92}
+M.~R. Maurizi.
+\newblock Proteases and protein degradation in {{Escherichia}} coli.
+\newblock {\em Experientia}, 48(2):178--201, February 1992.
+
+\bibitem{el-samad05}
+H.~{El-Samad}, H.~Kurata, J.~C. Doyle, C.~A. Gross, and M.~Khammash.
+\newblock Surviving heat shock: {{Control}} strategies for robustness and
+  performance.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  102(8):2736--2741, February 2005.
+
+\bibitem{grigorova06}
+Irina~L. Grigorova, Naum~J. Phleger, Vivek~K. Mutalik, and Carol~A. Gross.
+\newblock Insights into transcriptional regulation and {$\sigma$} competition
+  from an equilibrium model of {{RNA}} polymerase binding to {{DNA}}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  103(14):5332--5337, April 2006.
+
+\end{thebibliography}
